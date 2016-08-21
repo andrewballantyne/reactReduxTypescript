@@ -1,10 +1,11 @@
-import * as React from 'react';
-import { AbstractStatelessComponent } from '../../helpers/ReactHelpers';
+import * as React from "react";
+
+import { AbstractStatelessComponent } from "../../helpers/ReactHelpers";
 
 type Props = {
   value:number;
-  onIncrement:()=>void;
-  onDecrement:()=>void;
+  onIncrement:() => void;
+  onDecrement:() => void;
 };
 
 class Counter extends AbstractStatelessComponent<Props> {
@@ -13,16 +14,16 @@ class Counter extends AbstractStatelessComponent<Props> {
     return (
       <p>
         Clicked: {value} times
-        {' '}
+        {" "}
         <button onClick={onIncrement}>+</button>
-        {' '}
+        {" "}
         <button onClick={onDecrement}>-</button>
-        {' '}
-        <button onClick={() => { this.incrementIfOdd() }}>Increment if odd</button>
-        {' '}
-        <button onClick={() => { this.incrementAsync() }}>Increment async</button>
+        {" "}
+        <button onClick={() => { this.incrementIfOdd(); }}>Increment if odd</button>
+        {" "}
+        <button onClick={() => { this.incrementAsync(); }}>Increment async</button>
       </p>
-    )
+    );
   }
 
   private incrementIfOdd():void {
@@ -32,7 +33,7 @@ class Counter extends AbstractStatelessComponent<Props> {
     }
   }
 
-  public incrementAsync():void {
+  private incrementAsync():void {
     const { onIncrement } = this.props;
     setTimeout(onIncrement, 1000);
   }

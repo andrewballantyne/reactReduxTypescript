@@ -1,4 +1,4 @@
-import * as React from 'react';
+import * as React from "react";
 
 // We don't export this because it's our internal implementation if we want to add to both classes
 abstract class BaseAbstractComponent<P, S> extends React.Component<P, S> {

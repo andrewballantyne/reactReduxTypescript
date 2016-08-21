@@ -1,0 +1,20 @@
+{
+  "extends": "tslint:latest",
+  "rules": {
+    "typedef-whitespace": [
+      true,
+      {
+        "variable-declaration": "nospace"
+      }
+    ],
+    "whitespace": [
+      true,
+      "check-branch",
+      "check-decl",
+      "check-operator",
+      "check-module",
+      "check-separator",
+      "check-typecast"
+    ]
+  }
+}

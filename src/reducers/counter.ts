@@ -1,5 +1,6 @@
-import { AbstractReducer, AbstractAction } from '../helpers/ReduxHelpers';
-import { INCREMENT, DECREMENT } from '../components/counter/actions';
+import { AbstractAction, AbstractReducer } from "../helpers/ReduxHelpers";
+
+import { DECREMENT, INCREMENT } from "../components/counter/actions";
 
 type State = number;
 
