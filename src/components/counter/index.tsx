@@ -1,13 +1,13 @@
 import * as React from 'react';
 import { AbstractStatelessComponent } from '../../helpers/ReactHelpers';
 
-type CounterProps = {
+type Props = {
   value:number;
-  onIncrement:Function;
-  onDecrement:Function;
+  onIncrement:()=>void;
+  onDecrement:()=>void;
 };
 
-class Counter extends AbstractStatelessComponent<CounterProps> {
+class Counter extends AbstractStatelessComponent<Props> {
   public render():JSX.Element {
     const { value, onIncrement, onDecrement } = this.props;
     return (

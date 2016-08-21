@@ -1,7 +1,7 @@
 import { ActionType } from '../../helpers/ReduxHelpers';
 
-const INCREMENT:ActionType = 'INCREMENT';
-const DECREMENT:ActionType = 'DECREMENT';
+export const INCREMENT:ActionType = 'INCREMENT';
+export const DECREMENT:ActionType = 'DECREMENT';
 
 export const increment = () => {
   return {
