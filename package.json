@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "description": "Proof of Concept: React + Redux + Typescript using browserify + tsify to contain everything.",
   "scripts": {
-    "lint": "tslint src/**/*.ts* || echo ---",
-    "pack": "browserify src/main.tsx -p [ tsify --jsx react --noImplicitAny ] > out/bundle.js"
+    "lint": "tslint src/**/*.ts*",
+    "browserify": "browserify src/main.tsx -p [ tsify --jsx react --noImplicitAny ] > out/bundle.js",
+    "pack": "npm run lint && npm run browserify || echo ---"
   },
   "repository": {
     "type": "git",
